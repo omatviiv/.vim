@@ -1,5 +1,5 @@
 # .vim
-My preconfigured scripts that vim is looking for at startup.
+Preconfigured scripts that vim is looking for at startup.
 
 ## how to use
 1. Clone repository.

@@ -1,4 +1,6 @@
 # .vim
+My preconfigured scripts and config that vim is looking for at startup.
+
 ## how to use
 1. clone repository
 2. install tpope/vim-pathogen
@@ -8,6 +10,4 @@
 ```
 3. install plugins (optional)
 ~/.vim/vimrc contains section <PLUGINS></PLUGINS> which lists plugins with
-plugin specifc configs.
-
-Simply choose plugins you want to install and run `git clone ...`
+plugin specifc configs. Simply choose plugins you want to install and run `git clone ...`

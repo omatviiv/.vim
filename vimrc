@@ -61,15 +61,15 @@
   " git clone https://github.com/MaxMEllon/vim-jsx-pretty.git ~/.vim/bundle/vim-jsx-pretty
   " => vim-styled-components
   " git clone https://github.com/styled-components/vim-styled-components ~/.vim/bundle/vim-styled-components
-  " => html5
+  " => html5.vim
   " git clone https://github.com/othree/html5.vim.git ~/.vim/bundle/html5.vim
   " => nikvdp/ejs-syntax
   " git clone https://github.com/nikvdp/ejs-syntax.git ~/.vim/bundle/ejs-syntax
   " => typescript-vim
   " git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
   """"""" DATA BASE
-  " => tpope/dadbod
-  " git clone https://github.com/tpope/vim-dadbod.git ~/.vim/bundle/dadbod
+  " => tpope/vim-dadbod
+  " git clone https://github.com/tpope/vim-dadbod.git ~/.vim/bundle/vim-dadbod
   au BufEnter *.sql :DB g:mssqlprod = sqlserver://kinan:Recovery9@simplyworks.database.windows.net:1433/db-pmm
   " => simpledb
   " git clone https://github.com/ivalkeen/vim-simpledb ~/.vim/bundle/simpledb
@@ -135,7 +135,7 @@
   comclear
   " jump to Vim and Bash configs (rc files)
   command! -nargs=0 B tabe ~/.bash/.bashrc
-  command! -nargs=0 V tabe ~/.vim/.vimrc
+  command! -nargs=0 V tabe ~/.vim/vimrc
   " project
   command! -nargs=0 Eslint w|!echo =======Eslint======; npm run eslint
   command! -nargs=0 Sasslint w|!echo =======Sasslint======; npm run sasslint

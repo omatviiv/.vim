@@ -27,6 +27,8 @@
   au BufNewFile,BufRead *.ts set filetype=javascript
   au BufNewFile,BufRead *.tsx set filetype=javascript
   au BufNewFile,BufRead *.jsx set filetype=javascript
+  " ignore some directories for vimgrep
+  set wildignore+=node_modules
 " </GENERAL>
 
 " <PLUGINS>
@@ -65,6 +67,12 @@
   " git clone https://github.com/othree/html5.vim.git ~/.vim/bundle/html5.vim
   " => nikvdp/ejs-syntax
   " git clone https://github.com/nikvdp/ejs-syntax.git ~/.vim/bundle/ejs-syntax
+  """"""" TYPESCRIPT
+  " => tsuquyomi
+  " git clone https://github.com/Shougo/vimproc.vim.git ~/.vim/bundle/vimproc.vim
+  " cd ~/.vim/bundle/vimproc.vim
+  " make
+  " git clone https://github.com/Quramy/tsuquyomi.git ~/.vim/bundle/tsuquyomi
   " => typescript-vim
   " git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
   """"""" DATA BASE
@@ -197,6 +205,7 @@
 
 " <SEARCH>
   set hlsearch
+  hi Search term=reverse ctermbg=11 guibg=Yellow
   " general search function
   function! Fs(searchstr, path)
     let @/ = a:searchstr . "\\c" " highlight search pattern
@@ -214,11 +223,11 @@
     execute Fs(@a, a:file_pattern)
   endfunction
   " F7 - search for a string (normal and visual mode)
-  nnoremap <F7> :execute Fs(expand("<cword>"), "./[sa][rp][cp]/**/*")
-  vnoremap <F7> :<C-u>call SearchVisualSelection("./[sa][rp][cp]/**/*")
+  nnoremap <F7> :execute Fs(expand("<cword>"), "`git ls-files`")
+  vnoremap <F7> :<C-u>call SearchVisualSelection("`git ls-files`")
   " F8 - search for a string (normal and visual mode)
-  nnoremap <F8> :execute Fs(expand("<cword>"), "./node_modules/?s9*/**/*")
-  vnoremap <F8> :<C-u>call SearchVisualSelection("./node_modules/?s9*/**/*")
+  nnoremap <F8> :execute Fs(expand("<cword>"), "`git ls-files`")
+  vnoremap <F8> :<C-u>call SearchVisualSelection("`git ls-files`")
   " // (in visual) - to quickly search for highlighted text
   vnoremap // y/<C-R>"<CR>
 

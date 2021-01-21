@@ -5,6 +5,8 @@ nnoremap cu <Esc>I<Del><Del><Del><Esc>j
 nnoremap mb odebugger;<Esc>:w<CR>
 " mc - add console.log("")
 nnoremap mc oconsole.log();<Esc>1hi
+" medl - Modify: Eslint Disable Line
+nnoremap medl A // eslint-disable-line<Esc>
 
 " F2 for fold to next closing bracket
 nnoremap <F2> $zf%

@@ -200,7 +200,7 @@
 
 " <SEARCH>
   set hlsearch
-  hi Search term=reverse ctermbg=11 guibg=Yellow
+  hi Search ctermfg=black ctermbg=yellow
   " general search function
   function! Fs(searchstr, path)
     let @/ = a:searchstr . "\\c" " highlight search pattern

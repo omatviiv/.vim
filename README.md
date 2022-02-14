@@ -12,3 +12,5 @@ Preconfigured scripts that vim is looking for at startup.
 ~/.vim/vimrc contains section <PLUGINS></PLUGINS> which lists plugins with
 plugin specifc configs. Simply choose plugins you want to install and run `git clone ...` from plugin description for each one.
 4. (optional) Install [translate shell](https://github.com/soimort/translate-shell) (used by commands :TUK :TEN).
+
+**Why this repo is on gihub:** it is refered in some of my stackoverflow answers so it has to be public.

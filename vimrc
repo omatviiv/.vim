@@ -22,7 +22,7 @@
   set wildmenu                                                                                                            
   set wildmode=longest,list,full
   " git commit - autocomplete for commit message (inserts ticket name from branch name)
-  autocmd! BufReadPost COMMIT_EDITMSG :call feedkeys('A ')  | 0read !git rev-parse --abbrev-ref HEAD | sed 's/([a-zA-Z0-9-]*)//'
+  autocmd! BufReadPost COMMIT_EDITMSG :call feedkeys('A: ')  | 0read !git rev-parse --abbrev-ref HEAD | sed 's/([a-zA-Z0-9-]*)//'
   au BufNewFile,BufRead *.mjs set filetype=javascript
   au BufNewFile,BufRead *.ts set filetype=javascript
   au BufNewFile,BufRead *.tsx set filetype=javascript

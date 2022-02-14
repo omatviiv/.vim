@@ -68,11 +68,6 @@
   " => nikvdp/ejs-syntax
   " git clone https://github.com/nikvdp/ejs-syntax.git ~/.vim/bundle/ejs-syntax
   """"""" TYPESCRIPT
-  " => tsuquyomi
-  " git clone https://github.com/Shougo/vimproc.vim.git ~/.vim/bundle/vimproc.vim
-  " cd ~/.vim/bundle/vimproc.vim
-  " make
-  " git clone https://github.com/Quramy/tsuquyomi.git ~/.vim/bundle/tsuquyomi
   " => typescript-vim
   " git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
   """"""" DATA BASE

@@ -1,5 +1,6 @@
 " <GENERAL>
   set nocompatible
+  set backupcopy=yes           " recommended here https://webpack.js.org/guides/development/#adjusting-your-text-editor
   syntax on                    " turn on syntax highlighting
   set ruler                    " diplay cursor position in the status bar
   set nowrap                   " no line wrap 
@@ -21,8 +22,8 @@
   " to forcibly use it press Ctrl + d
   set wildmenu                                                                                                            
   set wildmode=longest,list,full
-  " git commit - autocomplete for commit message (inserts ticket name from branch name)
-  autocmd! BufReadPost COMMIT_EDITMSG :call feedkeys('A: ')  | 0read !git rev-parse --abbrev-ref HEAD | sed 's/([a-zA-Z0-9-]*)//'
+  " git commit - autocomplete for commit message (inserts ticket name from branch name i.e. 'omatviiv'):
+  " autocmd! BufReadPost COMMIT_EDITMSG :call feedkeys('A: ')  | 0read !git rev-parse --abbrev-ref HEAD | sed 's/([a-zA-Z0-9-]*)//'
   au BufNewFile,BufRead *.mjs set filetype=javascript
   au BufNewFile,BufRead *.ts set filetype=javascript
   au BufNewFile,BufRead *.tsx set filetype=javascript
@@ -73,7 +74,8 @@
   """"""" DATA BASE
   " => tpope/vim-dadbod
   " git clone https://github.com/tpope/vim-dadbod.git ~/.vim/bundle/vim-dadbod
-  au BufEnter *.sql :DB g:mssqlprod = sqlserver://kinan:Recovery9@simplyworks.database.windows.net:1433/db-pmm
+  " UNCOMENT NEXT LINE IF YOU WANT TO TRIGGER sql query run against default db on sql file open
+  " au BufEnter *.sql :DB g:postgresql = postgresql://postgres@localhost/shipacms
   " => simpledb
   " git clone https://github.com/ivalkeen/vim-simpledb ~/.vim/bundle/simpledb
   """"""" MISCELANEOUS
@@ -151,6 +153,8 @@
   " run jest tests for current file
   command! -nargs=0 JEst execute ":!./node_modules/.bin/jest " . expand('%:r') . ".test." . expand('%:e')
   command! -nargs=0 Ujest execute ":!./node_modules/.bin/jest -u " . expand('%:r') . ".test." . expand('%:e')
+  " DBs to access throught vim-dadbod plugin
+  command! -nargs=0 Dbshipacmslocal  execute ":DB postgresql://postgres@localhost/shipacms < " . expand('%')
   " translate-shell
   command! -nargs=1 TUK call TranslateToUK("uk", <f-args>)
   command! -nargs=1 TEN call TranslateToUK("en", <f-args>)

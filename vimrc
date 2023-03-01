@@ -74,6 +74,23 @@
   """"""" DATA BASE
   " => tpope/vim-dadbod
   " git clone https://github.com/tpope/vim-dadbod.git ~/.vim/bundle/vim-dadbod
+  "
+  " HOW TO USE plugin:
+  " there is one single command :DB which is capable of running sql queries
+  " :[prefix]<DB> <url> [query] where [] - means optional, <> - required
+  " [prefix] - optional command prefix which can be
+  "  - :%DB <url> - passes whole current file as sql query to the DB command
+  "  - :'<,'>DB <url> - passes visual selection as sql query to th DB command
+  " <url> - url <postgres://user:pass@db.example.com/production_database>
+  "              ^          ^    ^    ^              ^
+  "              db type    usr  pwd  db_host        db_name
+  "              ommiting passsword will force vim to output pwd prompt
+  " url can also be saved as vim variables: let g:someDB = <url>
+  " So from my point of view the best way to use this plugin is to simply
+  " save urls in vim variables for oftenly used dbs, variables should be
+  " defined here:
+  let g:shipacmsLocalDB = 'postgres://postgres@localhost/shipacms'
+  let g:dockerLocalDB = 'postgres://postgres@localhost:5433'
   " UNCOMENT NEXT LINE IF YOU WANT TO TRIGGER sql query run against default db on sql file open
   " au BufEnter *.sql :DB g:postgresql = postgresql://postgres@localhost/shipacms
   " => simpledb
@@ -153,8 +170,6 @@
   " run jest tests for current file
   command! -nargs=0 JEst execute ":!./node_modules/.bin/jest " . expand('%:r') . ".test." . expand('%:e')
   command! -nargs=0 Ujest execute ":!./node_modules/.bin/jest -u " . expand('%:r') . ".test." . expand('%:e')
-  " DBs to access throught vim-dadbod plugin
-  command! -nargs=0 Dbshipacmslocal  execute ":DB postgresql://postgres@localhost/shipacms < " . expand('%')
   " translate-shell
   command! -nargs=1 TUK call TranslateToUK("uk", <f-args>)
   command! -nargs=1 TEN call TranslateToUK("en", <f-args>)

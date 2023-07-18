@@ -43,6 +43,9 @@
   let g:netrw_liststyle = 1
   let g:netrw_ftp_cmd = "ftp -p" " enable passive mode for ftp connections
   let g:netrw_sort_by = "exten"
+  " to increase space for file name because otherwise its not possible to open 
+  " files with long names using netrw view
+  let g:netrw_maxfilenamelen = 50
   " => ftplugin - builtin plugin
   filetype plugin on
   filetype plugin indent on

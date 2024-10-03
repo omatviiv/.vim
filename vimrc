@@ -30,10 +30,6 @@
   au BufNewFile,BufRead *.jsx set filetype=javascript
   " ignore some directories for vimgrep
   set wildignore+=node_modules
-  " change visual selection colors
-  hi Visual term=reverse ctermbg=7
-  hi DiffDelete term=bold ctermfg=9 ctermbg=1
-  hi DiffAdd term=bold ctermfg=10 ctermbg=2
 " </GENERAL>
 
 " <PLUGINS>
@@ -301,3 +297,13 @@
     return sub . info
   endfunction
 " </FOLD>
+
+" <GENERAL>
+  " change visual selection colors
+  " this doesn't work if its on top of the file
+  hi Visual     term=reverse ctermbg=7
+  hi DiffAdd    ctermfg=11   ctermbg=2
+  hi DiffChange ctermfg=8    ctermbg=12
+  hi DiffDelete ctermfg=9    ctermbg=8
+  hi DiffText   ctermfg=11   ctermbg=2
+" </GENERAL>

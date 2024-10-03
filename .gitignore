@@ -2,3 +2,4 @@
 .netrwhist
 bundle
 autoload
+pack/github/start/copilot.vim

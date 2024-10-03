@@ -14,4 +14,9 @@ Preconfigured scripts that vim is looking for at startup.
 plugin specifc configs. Simply choose plugins you want to install and run `git clone ...` from plugin description for each one.
 5. (optional) Install [translate shell](https://github.com/soimort/translate-shell) (used by commands :TUK :TEN).
 
+## notes
+.vim/pack/github/start/copilot.vim is in .gitignore because better to follow
+copilot installation instructions from copilot repo since there is an auth
+required anyway so including it here won't really help.
+
 **Why this repo is on gihub:** it is refered in some of my stackoverflow answers so it has to be public.

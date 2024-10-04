@@ -306,5 +306,4 @@
   hi DiffChange ctermfg=8    ctermbg=12
   hi DiffAdd    ctermfg=10   ctermbg=6
   hi DiffText   ctermfg=10   ctermbg=6
-  added line
 " </GENERAL>

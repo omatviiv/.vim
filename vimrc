@@ -302,8 +302,9 @@
   " change visual selection colors
   " this doesn't work if its on top of the file
   hi Visual     term=reverse ctermbg=7
-  hi DiffAdd    ctermfg=11   ctermbg=2
+  hi DiffDelete ctermfg=2    ctermbg=6
   hi DiffChange ctermfg=8    ctermbg=12
-  hi DiffDelete ctermfg=9    ctermbg=8
-  hi DiffText   ctermfg=11   ctermbg=2
+  hi DiffAdd    ctermfg=10   ctermbg=6
+  hi DiffText   ctermfg=10   ctermbg=6
+  added line
 " </GENERAL>

@@ -299,11 +299,22 @@
 " </FOLD>
 
 " <GENERAL>
-  " change visual selection colors
   " this doesn't work if its on top of the file
+  " change visual selection colors
   hi Visual     term=reverse ctermbg=7
   hi DiffDelete ctermfg=4    ctermbg=8
   hi DiffChange ctermfg=4    ctermbg=8
-  hi DiffAdd    ctermfg=3   ctermbg=6
-  hi DiffText   ctermfg=3   ctermbg=6
+  hi DiffAdd    ctermfg=11   ctermbg=4
+  hi DiffText   ctermfg=11   ctermbg=4
+
+  hi String     ctermfg=2
+  hi Number     ctermfg=2
+  hi Boolean    ctermfg=2
+  hi Character  ctermfg=2
+  hi Type       ctermfg=1
+  hi Comment    ctermfg=4
+  hi Operator   ctermfg=12
+  hi Statement  ctermfg=3
+
+  " see ./highlight.txt for more
 " </GENERAL>

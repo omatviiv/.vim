@@ -1,0 +1,755 @@
+  " SpecialKey     xxx term=bold ctermfg=4 guifg=Blue
+  " EndOfBuffer    xxx links to NonText
+  " NonText        xxx term=bold ctermfg=12 gui=bold guifg=Blue
+  " Directory      xxx term=bold ctermfg=4 guifg=Blue
+  " ErrorMsg       xxx term=standout ctermfg=15 ctermbg=1 guifg=White guibg=Red
+  " IncSearch      xxx term=reverse cterm=reverse gui=reverse
+  " Search         xxx term=reverse ctermfg=0 ctermbg=11 guibg=Yellow
+  " CurSearch      xxx links to Search
+  " MoreMsg        xxx term=bold ctermfg=2 gui=bold guifg=SeaGreen
+  " ModeMsg        xxx term=bold cterm=bold gui=bold
+  " LineNr         xxx term=underline ctermfg=130 guifg=Brown
+  " LineNrAbove    xxx cleared
+  " LineNrBelow    xxx cleared
+  " CursorLineNr   xxx term=bold cterm=underline ctermfg=130 gui=bold guifg=Brown
+  " CursorLineSign xxx links to SignColumn
+  " CursorLineFold xxx links to FoldColumn
+  " Question       xxx term=standout ctermfg=2 gui=bold guifg=SeaGreen
+  " StatusLine     xxx term=bold,reverse cterm=bold,reverse gui=bold,reverse
+  " StatusLineNC   xxx term=reverse cterm=reverse gui=reverse
+  " VertSplit      xxx term=reverse cterm=reverse gui=reverse
+  " Title          xxx term=bold ctermfg=5 gui=bold guifg=Magenta
+  " Visual         xxx term=reverse ctermbg=7 guibg=LightGrey
+  " VisualNOS      xxx term=bold,underline cterm=bold,underline gui=bold,underline
+  " WarningMsg     xxx term=standout ctermfg=1 guifg=Red
+  " WildMenu       xxx term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
+  " Folded         xxx term=standout ctermfg=7 ctermbg=8 guifg=DarkBlue guibg=LightGrey
+  " FoldColumn     xxx term=standout ctermfg=4 ctermbg=248 guifg=DarkBlue guibg=Grey
+  " DiffAdd        xxx term=bold ctermfg=3 ctermbg=6 guibg=LightBlue
+  " DiffChange     xxx term=bold ctermfg=4 ctermbg=8 guibg=LightMagenta
+  " DiffDelete     xxx term=bold ctermfg=4 ctermbg=8 gui=bold guifg=Blue guibg=LightCyan
+  " DiffText       xxx term=reverse cterm=bold ctermfg=3 ctermbg=6 gui=bold guibg=Red
+  " SignColumn     xxx term=standout ctermfg=4 ctermbg=248 guifg=DarkBlue guibg=Grey
+  " Conceal        xxx ctermfg=7 ctermbg=242 guifg=LightGrey guibg=DarkGrey
+  " SpellBad       xxx term=reverse ctermbg=224 gui=undercurl guisp=Red
+  " SpellCap       xxx term=reverse ctermbg=81 gui=undercurl guisp=Blue
+  " SpellRare      xxx term=reverse ctermbg=225 gui=undercurl guisp=Magenta
+  " SpellLocal     xxx term=underline ctermbg=14 gui=undercurl guisp=DarkCyan
+  " Pmenu          xxx ctermfg=0 ctermbg=225 guibg=LightMagenta
+  " PmenuSel       xxx ctermfg=0 ctermbg=7 guibg=Grey
+  " PmenuKind      xxx links to Pmenu
+  " PmenuKindSel   xxx links to PmenuSel
+  " PmenuExtra     xxx links to Pmenu
+  " PmenuExtraSel  xxx links to PmenuSel
+  " PmenuSbar      xxx ctermbg=248 guibg=Grey
+  " PmenuThumb     xxx ctermbg=0 guibg=Black
+  " TabLine        xxx term=underline cterm=underline ctermfg=0 ctermbg=7 gui=underline guibg=LightGrey
+  " TabLineSel     xxx term=bold cterm=bold gui=bold
+  " TabLineFill    xxx term=reverse cterm=reverse gui=reverse
+  " CursorColumn   xxx term=reverse ctermbg=7 guibg=Grey90
+  " CursorLine     xxx term=underline cterm=underline guibg=Grey90
+  " ColorColumn    xxx term=reverse ctermbg=224 guibg=LightRed
+  " QuickFixLine   xxx links to Search
+  " StatusLineTerm xxx term=bold,reverse cterm=bold ctermfg=15 ctermbg=2
+  " gui=bold guifg=bg guibg=DarkGreen
+  " StatusLineTermNC xxx term=reverse ctermfg=15 ctermbg=2 guifg=bg guibg=DarkGreen
+  " Normal         xxx cleared
+  " MatchParen     xxx term=reverse ctermbg=14 guibg=Cyan
+  " ToolbarLine    xxx term=underline ctermbg=7 guibg=LightGrey
+  " ToolbarButton  xxx cterm=bold ctermfg=15 ctermbg=242 gui=bold guifg=White guibg=Grey40
+  " Comment        xxx term=bold ctermfg=4 guifg=Blue
+  " Constant       xxx term=underline ctermfg=1 guifg=Magenta
+  " Special        xxx term=bold ctermfg=5 guifg=#6a5acd
+  " Identifier     xxx term=underline ctermfg=6 guifg=DarkCyan
+  " Statement      xxx term=bold ctermfg=130 gui=bold guifg=Brown
+  " PreProc        xxx term=underline ctermfg=5 guifg=#6a0dad
+  " Type           xxx term=underline ctermfg=2 gui=bold guifg=SeaGreen
+  " Underlined     xxx term=underline cterm=underline ctermfg=5 gui=underline guifg=SlateBlue
+  " Ignore         xxx ctermfg=15 guifg=bg
+  " Error          xxx term=reverse ctermfg=15 ctermbg=9 guifg=White guibg=Red
+  " Todo           xxx term=standout ctermfg=0 ctermbg=11 guifg=Blue guibg=Yellow
+  " String         xxx ctermfg=2
+  " Character      xxx links to Constant
+  " Number         xxx links to Constant
+  " Boolean        xxx links to Constant
+  " Float          xxx links to Number
+  " Function       xxx links to Identifier
+  " Conditional    xxx links to Statement
+  " Repeat         xxx links to Statement
+  " Label          xxx links to Statement
+  " Operator       xxx links to Statement
+  " Keyword        xxx links to Statement
+  " Exception      xxx links to Statement
+  " Include        xxx links to PreProc
+  " Define         xxx links to PreProc
+  " Macro          xxx links to PreProc
+  " PreCondit      xxx links to PreProc
+  " StorageClass   xxx links to Type
+  " Structure      xxx links to Type
+  " Typedef        xxx links to Type
+  " Tag            xxx links to Special
+  " SpecialChar    xxx links to Special
+  " Delimiter      xxx links to Special
+  " SpecialComment xxx links to Special
+  " Debug          xxx links to Special
+  " CopilotSuggestion xxx ctermfg=244 guifg=#808080
+  " CopilotAnnotation xxx links to MoreMsg
+  " netrwHide      xxx links to netrwComment
+  " netrwSortBy    xxx cleared
+  " netrwSortSeq   xxx cleared
+  " netrwQuickHelp xxx cleared
+  " netrwVersion   xxx links to Identifier
+  " netrwCopyTgt   xxx cleared
+  " netrwDir       xxx links to Directory
+  " netrwSymLink   xxx links to Question
+  " netrwExe       xxx links to PreProc
+  " netrwLink      xxx links to Special
+  " netrwPlain     xxx cleared
+  " netrwClassify  xxx links to Function
+  " netrwSpecial   xxx cleared
+  " netrwDateSep   xxx links to Delimiter
+  " netrwTime      xxx cleared
+  " netrwSizeDate  xxx cleared
+  " netrwTreeBarSpace xxx cleared
+  " netrwTreeBar   xxx links to Special
+  " netrwTimeSep   xxx links to netrwDateSep
+  " netrwComment   xxx links to Comment
+  " netrwHidePat   xxx links to Statement
+  " netrwSlash     xxx cleared
+  " netrwHideSep   xxx links to netrwComment
+  " netrwList      xxx links to Statement
+  " netrwComma     xxx links to netrwComment
+  " netrwHelpCmd   xxx links to Function
+  " netrwQHTopic   xxx links to Number
+  " netrwCmdSep    xxx links to Delimiter
+  " netrwCmdNote   xxx cleared
+  " netrwMarkFile  xxx links to TabLineSel
+  " netrwCoreDump  xxx links to WarningMsg
+  " netrwData      xxx links to Folded
+  " netrwHdr       xxx links to netrwPlain
+  " netrwLex       xxx links to netrwPlain
+  " netrwLib       xxx links to DiffChange
+  " netrwMakefile  xxx links to DiffChange
+  " netrwYacc      xxx links to netrwPlain
+  " netrwPix       xxx links to Special
+  " netrwBak       xxx links to netrwGray
+  " netrwGray      xxx links to Folded
+  " netrwCompress  xxx links to netrwGray
+  " netrwSpecFile  xxx links to netrwGray
+  " netrwObj       xxx links to netrwGray
+  " netrwTags      xxx links to netrwGray
+  " netrwTilde     xxx links to netrwGray
+  " netrwTmp       xxx links to netrwGray
+  " javascriptHtmlEvents xxx cleared
+  " javascriptDomElemAttrs xxx cleared
+  " javascriptDomElemFuncs xxx cleared
+  " jsNoise        xxx links to Noise
+  " jsObjectProp   xxx cleared
+  " jsFuncCall     xxx links to Function
+  " jsPrototype    xxx links to Special
+  " jsTaggedTemplate xxx links to
+  " StorageClass
+  " jsDot          xxx links to Noise
+  " jsParensError  xxx links to Error
+  " jsStorageClass xxx links to StorageClass
+  " jsDestructuringBlock xxx cleared
+  " jsDestructuringArray xxx cleared
+  " jsVariableDef  xxx cleared
+  " jsFlowDefinition xxx links to PreProc
+  " jsOperatorKeyword xxx links to jsOperator
+  " jsOf           xxx links to Operator
+  " jsOperator     xxx links to Operator
+  " jsBooleanTrue  xxx links to Boolean
+  " jsBooleanFalse xxx links to Boolean
+  " jsImport       xxx links to Include
+  " jsModuleAsterisk xxx links to Noise
+  " jsModuleKeyword xxx cleared
+  " jsModuleGroup  xxx cleared
+  " jsFlowImportType xxx links to PreProc
+  " jsExport       xxx links to Include
+  " jsExportDefault xxx links to StorageClass
+  " jsFlowTypeStatement xxx links to PreProc
+  " jsModuleAs     xxx links to Include
+  " jsFrom         xxx links to Include
+  " jsModuleComma  xxx links to jsNoise
+  " jsExportDefaultGroup xxx links to jsExportDefault
+  " jsString       xxx links to String
+  " jsFlowTypeKeyword xxx links to PreProc
+  " jsSpecial      xxx links to Special
+  " jsTemplateExpression xxx cleared
+  " jsTemplateString xxx links to String
+  " jsNumber       xxx links to Number
+  " jsFloat        xxx links to Float
+  " jsTemplateBraces xxx links to Noise
+  " jsRegexpCharClass xxx links to Character
+  " jsRegexpBoundary xxx links to SpecialChar
+  " jsRegexpBackRef xxx links to SpecialChar
+  " jsRegexpQuantifier xxx links to SpecialChar
+  " jsRegexpOr     xxx links to Conditional
+  " jsRegexpMod    xxx links to SpecialChar
+  " jsRegexpGroup  xxx links to jsRegexpString
+  " jsRegexpString xxx links to String
+  " jsObjectSeparator xxx links to Noise
+  " jsObjectShorthandProp xxx links to jsObjectKey
+  " jsFunctionKey  xxx cleared
+  " jsObjectValue  xxx cleared
+  " jsObjectKey    xxx cleared
+  " jsObjectKeyString xxx links to String
+  " jsBrackets     xxx links to Noise
+  " jsFuncArgs     xxx cleared
+  " jsObjectKeyComputed xxx cleared
+  " jsObjectColon  xxx links to jsNoise
+  " jsObjectFuncName xxx links to Function
+  " jsObjectMethodType xxx links to Type
+  " jsObjectStringKey xxx links to String
+  " jsNull         xxx links to Type
+  " jsReturn       xxx links to Statement
+  " jsUndefined    xxx links to Type
+  " jsNan          xxx links to Number
+  " jsThis         xxx links to Special
+  " jsSuper        xxx links to Constant
+  " jsBlock        xxx cleared
+  " jsBlockLabel   xxx links to Identifier
+  " jsBlockLabelKey xxx links to jsBlockLabel
+  " jsStatement    xxx links to Statement
+  " jsConditional  xxx links to Conditional
+  " jsParenIfElse  xxx cleared
+  " jsCommentIfElse xxx links to jsComment
+  " jsIfElseBlock  xxx cleared
+  " jsParenSwitch  xxx cleared
+  " jsWhile        xxx links to jsRepeat
+  " jsParenWhile   xxx cleared
+  " jsFor          xxx links to jsRepeat
+  " jsParenFor     xxx cleared
+  " jsForAwait     xxx links to Keyword
+  " jsDo           xxx links to Repeat
+  " jsRepeatBlock  xxx cleared
+  " jsLabel        xxx links to Label
+  " jsSwitchColon  xxx links to Noise
+  " jsSwitchCase   xxx cleared
+  " jsTry          xxx links to Exception
+  " jsTryCatchBlock xxx cleared
+  " jsFinally      xxx links to Exception
+  " jsFinallyBlock xxx cleared
+  " jsCatch        xxx links to Exception
+  " jsParenCatch   xxx cleared
+  " jsException    xxx links to Exception
+  " jsAsyncKeyword xxx links to Keyword
+  " jsSwitchBlock  xxx cleared
+  " jsGlobalObjects xxx links to Constant
+  " jsGlobalNodeObjects xxx links to Constant
+  " jsExceptions   xxx links to Constant
+  " jsBuiltins     xxx links to Constant
+  " jsFutureKeys   xxx cleared
+  " jsDomErrNo     xxx links to Constant
+  " jsDomNodeConsts xxx links to Constant
+  " jsHtmlEvents   xxx links to Special
+  " jsSpreadExpression xxx cleared
+  " jsBracket      xxx cleared
+  " jsParens       xxx links to Noise
+  " jsParen        xxx cleared
+  " jsParensDecorator xxx links to jsParens
+  " jsParenDecorator xxx cleared
+  " jsParensIfElse xxx links to jsParens
+  " jsParensWhile  xxx links to jsParensRepeat
+  " jsCommentRepeat xxx links to jsComment
+  " jsParensFor    xxx links to jsParensRepeat
+  " jsParensSwitch xxx links to jsParens
+  " jsParensCatch  xxx links to jsParens
+  " jsFuncParens   xxx links to Noise
+  " jsFuncArgCommas xxx cleared
+  " jsComment      xxx links to Comment
+  " jsFuncArgExpression xxx cleared
+  " jsRestExpression xxx links to jsFuncArgs
+  " jsFlowArgumentDef xxx links to jsFlowDefinition
+  " jsCommentFunction xxx links to jsComment
+  " jsFuncBlock    xxx cleared
+  " jsFlowReturn   xxx links to PreProc
+  " jsClassBraces  xxx links to Noise
+  " jsClassFuncName xxx links to jsFuncName
+  " jsClassMethodType xxx links to Type
+  " jsArrowFunction xxx links to Type
+  " jsArrowFuncArgs xxx links to jsFuncArgs
+  " jsGenerator    xxx links to jsFunction
+  " jsDecorator    xxx links to Special
+  " jsClassProperty xxx links to jsObjectKey
+  " jsClassPropertyComputed xxx cleared
+  " jsClassStringKey xxx links to String
+  " jsClassBlock   xxx cleared
+  " jsClassBlock   xxx cleared
+  " jsFuncBraces   xxx links to
+  " Noise
+  " jsIfElseBraces xxx links to Noise
+  " jsTryCatchBraces xxx links to Noise
+  " jsFinallyBraces xxx links to Noise
+  " jsSwitchBraces xxx links to Noise
+  " jsRepeatBraces xxx links to Noise
+  " jsDestructuringBraces xxx links to Noise
+  " jsDestructuringProperty xxx links to jsFuncArgs
+  " jsDestructuringAssignment xxx links to jsObjectKey
+  " jsDestructuringNoise xxx links to Noise
+  " jsDestructuringPropertyComputed xxx cleared
+  " jsDestructuringPropertyValue xxx cleared
+  " jsObjectBraces xxx links to Noise
+  " jsObject       xxx cleared
+  " jsBraces       xxx links to Noise
+  " jsModuleBraces xxx links to Noise
+  " jsSpreadOperator xxx links to Operator
+  " jsRestOperator xxx links to Operator
+  " jsTernaryIfOperator xxx links to Operator
+  " jsTernaryIf    xxx cleared
+  " jsFuncName     xxx links to Function
+  " jsFlowFunctionGroup xxx links to PreProc
+  " jsFuncArgOperator xxx links to jsFuncArgs
+  " jsArguments    xxx links to Special
+  " jsFunction     xxx links to Type
+  " jsClassKeyword xxx links to Keyword
+  " jsExtendsKeyword xxx links to Keyword
+  " jsClassNoise   xxx links to Noise
+  " jsFlowClassFunctionGroup xxx links to PreProc
+  " jsFlowClassGroup xxx links to PreProc
+  " jsCommentClass xxx links to jsComment
+  " jsClassDefinition xxx links to jsFuncName
+  " jsClassValue   xxx cleared
+  " jsFlowClassDef xxx links to jsFlowDefinition
+  " jsDestructuringValue xxx cleared
+  " jsDestructuringValueAssignment xxx cleared
+  " jsCommentTodo  xxx links to Todo
+  " jsEnvComment   xxx links to PreProc
+  " jsDecoratorFunction xxx links to Function
+  " jsFlowNoise    xxx links to Noise
+  " jsFlowArray    xxx links to PreProc
+  " jsFlowObject   xxx links to PreProc
+  " jsFlowExactObject xxx links to PreProc
+  " jsFlowArrow    xxx links to PreProc
+  " jsFlowParens   xxx links to PreProc
+  " jsFlowType     xxx links to Type
+  " jsFlowTypeof   xxx links to PreProc
+  " jsFlowTypeCustom xxx links to PreProc
+  " jsFlowGeneric  xxx links to PreProc
+  " jsFlowDeclareBlock xxx cleared
+  " jsFlowObjectGeneric xxx links to jsFlowGeneric
+  " jsFlowMaybe    xxx links to PreProc
+  " jsFlowObjectKey xxx links to jsObjectKey
+  " jsFlowOrOperator xxx links to jsOperator
+  " jsFlowWildcard xxx links to PreProc
+  " jsFlowReturnParens xxx links to jsFlowParens
+  " jsFlowReturnOrOp xxx links to jsFlowOrOperator
+  " jsFlowReturnObject xxx links to jsFlowReturn
+  " jsFlowReturnArray xxx links to jsFlowArray
+  " jsFlowReturnArrow xxx
+  " links to PreProc
+  " jsFlowReturnGroup xxx links to jsFlowGeneric
+  " jsFlowReturnKeyword xxx cleared
+  " jsFlowReturnMaybe xxx links to PreProc
+  " jsFlowWildcardReturn xxx links to PreProc
+  " jsFlowTypeofReturn xxx links to PreProc
+  " jsFlowObjectFuncName xxx links to jsObjectFuncName
+  " jsFlowTypeOperator xxx links to Operator
+  " jsFlowTypeValue xxx links to PreProc
+  " jsFlowDeclare  xxx links to PreProc
+  " jsFlowModule   xxx links to PreProc
+  " jsFlowInterface xxx links to PreProc
+  " jsFlowClassProperty xxx links to jsClassProperty
+  " jsFlowInterfaceBlock xxx cleared
+  " jsFlowParenAnnotation xxx links to PreProc
+  " Noise          xxx cleared
+  " jsParensRepeat xxx links to jsParens
+  " jsCharacter    xxx links to Character
+  " jsBranch       xxx links to Conditional
+  " jsRepeat       xxx links to Repeat
+  " jsError        xxx links to Error
+  " jsDomElemAttrs xxx links to Label
+  " jsDomElemFuncs xxx links to PreProc
+  " jsHtmlElemAttrs xxx links to Label
+  " jsHtmlElemFuncs xxx links to PreProc
+  " jsCssStyles    xxx links to Label
+  " javaScript     xxx cleared
+  " cssPositioningProp xxx links to cssProp
+  " cssCustomPositioningPrefix xxx links to StorageClass
+  " cssTagName     xxx links to Statement
+  " cssSelectorOp  xxx links to Special
+  " cssSelectorOp2 xxx links to Special
+  " cssUnicodeEscape xxx links to Special
+  " cssStringQ     xxx links to String
+  " cssStringQQ    xxx links to String
+  " cssAttributeSelector xxx links to String
+  " cssClassNameDot xxx links to Function
+  " cssClassName   xxx links to Function
+  " cssIdentifier  xxx links to Function
+  " cssUnitDecorators xxx links to Number
+  " cssValueInteger xxx links to Number
+  " cssValueNumber xxx links to Number
+  " cssValueLength xxx links to Number
+  " cssValueAngle  xxx links to Number
+  " cssValueTime   xxx links to Number
+  " cssValueFrequency xxx links to Number
+  " cssColor       xxx links to Constant
+  " cssImportant   xxx links to Special
+  " cssCustomProp  xxx links to Special
+  " cssFunctionName xxx links to Function
+  " cssURL         xxx links to String
+  " cssMathParens  xxx cleared
+  " cssFunction    xxx links to Constant
+  " cssMathGroup   xxx cleared
+  " cssFunctionComma xxx links to Function
+  " cssGradientAttr xxx links to cssAttr
+  " cssCommonAttr  xxx links to cssAttr
+  " cssAnimationProp xxx links to cssProp
+  " cssAnimationAttr xxx links to cssAttr
+  " cssBackgroundProp xxx links to
+  " cssProp
+  " cssBackgroundAttr xxx links to cssAttr
+  " cssBorderProp  xxx links to cssProp
+  " cssBorderAttr  xxx links to cssAttr
+  " cssBoxProp     xxx links to cssProp
+  " cssBoxAttr     xxx links to cssAttr
+  " cssCascadeProp xxx links to cssProp
+  " cssCascadeAttr xxx links to cssAttr
+  " cssColorProp   xxx links to cssProp
+  " cssDimensionProp xxx links to cssProp
+  " cssFlexibleBoxProp xxx links to cssProp
+  " cssFlexibleBoxAttr xxx links to cssAttr
+  " cssFontProp    xxx links to cssProp
+  " cssFontAttr    xxx links to cssAttr
+  " cssMultiColumnProp xxx links to cssProp
+  " cssMultiColumnAttr xxx links to cssAttr
+  " cssInteractProp xxx links to cssProp
+  " cssInteractAttr xxx links to cssAttr
+  " cssGeneratedContentProp xxx links to cssProp
+  " cssGeneratedContentAttr xxx links to cssAttr
+  " cssGridProp    xxx links to cssProp
+  " cssHyerlinkProp xxx links to cssProp
+  " cssListProp    xxx links to cssProp
+  " cssListAttr    xxx links to cssAttr
+  " cssObjectProp  xxx links to cssProp
+  " cssObjectAttr  xxx links to cssAttr
+  " cssPositioningAttr xxx links to cssAttr
+  " cssPrintAttr   xxx links to cssAttr
+  " cssTableProp   xxx links to cssProp
+  " cssTableAttr   xxx links to cssAttr
+  " cssTextProp    xxx links to cssProp
+  " cssTextAttr    xxx links to cssAttr
+  " cssTransformProp xxx links to cssProp
+  " cssTransitionProp xxx links to cssProp
+  " cssTransitionAttr xxx links to cssAttr
+  " cssUIProp      xxx links to cssProp
+  " cssUIAttr      xxx links to cssAttr
+  " cssIEUIAttr    xxx links to cssAttr
+  " cssIEUIProp    xxx links to cssProp
+  " cssAuralProp   xxx links to cssProp
+  " cssAuralAttr   xxx links to cssAttr
+  " cssMobileTextProp xxx links to cssProp
+  " cssMediaProp   xxx links to cssProp
+  " cssMediaAttr   xxx links to cssAttr
+  " cssDefinition  xxx cleared
+  " cssKeyFrameProp xxx links to Constant
+  " cssPageMarginProp xxx links to cssAtKeyword
+  " cssPageProp    xxx links to cssProp
+  " cssFontDescriptorProp xxx links to cssProp
+  " cssFontDescriptorAttr xxx links to cssAttr
+  " cssBraces      xxx links to Function
+  " cssError       xxx links to Error
+  " cssAtRule      xxx links to Include
+  " cssAttrRegion  xxx cleared
+  " cssComment     xxx links to Comment
+  " cssVendor      xxx links to Comment
+  " cssHacks       xxx links to Comment
+  " cssNoise       xxx links to Noise
+  " cssBraceError  xxx links to Error
+  " cssAttrComma   xxx links to Special
+  " cssPseudoClassId xxx links to PreProc
+  " cssPseudoClassFn xxx cleared
+  " cssPseudoClass xxx cleared
+  " cssSpecialCharQQ xxx cleared
+  " cssSpecialCharQ xxx cleared
+  " cssAtKeyword   xxx links to PreProc
+  " cssAtRuleLogical xxx links to Statement
+  " cssMediaType   xxx links to Special
+  " cssPagePseudo  xxx links to PreProc
+  " cssDeprecated  xxx links to Error
+  " cssProp        xxx links to StorageClass
+  " cssContentForPagedMediaProp xxx links to cssProp
+  " cssLineboxProp xxx links to cssProp
+  " cssMarqueeProp xxx links to cssProp
+  " cssPagedMediaProp xxx links to cssProp
+  " cssPrintProp   xxx links to cssProp
+  " cssRubyProp    xxx links to cssProp
+  " cssSpeechProp  xxx links to cssProp
+  " cssRenderProp  xxx links to cssProp
+  " cssAttr        xxx links to Constant
+  " cssContentForPagedMediaAttr xxx links to cssAttr
+  " cssDimensionAttr xxx links to cssAttr
+  " cssGridAttr    xxx links to cssAttr
+  " cssHyerlinkAttr xxx links to cssAttr
+  " cssLineboxAttr xxx links to cssAttr
+  " cssMarginAttr  xxx links to cssAttr
+  " cssMarqueeAttr xxx links to cssAttr
+  " cssPaddingAttr xxx links to cssAttr
+  " cssPagedMediaAttr xxx links to cssAttr
+  " cssRubyAttr    xxx links to cssAttr
+  " cssSpeechAttr  xxx links to cssAttr
+  " cssTransformAttr xxx links to cssAttr
+  " cssRenderAttr  xxx links to cssAttr
+  " cssPseudoClassLang xxx links to Constant
+  " cssMediaComma  xxx links to Normal
+  " cssFontDescriptor xxx links to Special
+  " cssUnicodeRange xxx links to Constant
+  " typescriptInterpolation xxx cleared
+  " typescriptTemplateSubstitution xxx cleared
+  " cssCustomAttrRegion xxx cleared
+  " cssCustomMediaBlock xxx cleared
+  " cssPageMargin  xxx cleared
+  " cssCustomPageWrap xxx cleared
+  " cssCustomPageMargin xxx cleared
+  " cssCustomKeyFrameSelector xxx links to Constant
+  " cssMediaKeyword xxx cleared
+  " cssMediaMediaAttr xxx cleared
+  " cssVencor      xxx cleared
+  " cssIncludeKeyword xxx cleared
+  " cssInclude     xxx cleared
+  " cssPage        xxx cleared
+  " cssKeyFrame    xxx cleared
+  " styledAmpersand xxx links to Special
+  " styledTagNameString xxx cleared
+  " styledDefinition xxx cleared
+  " javascriptTagRef xxx cleared
+  " styledPrefix   xxx cleared
+  " styledXmlRegionKeyword xxx links to Type
+  " styledXmlRegionNoise xxx links to Noise
+  " xmlAttrib      xxx cleared
+  " styledXmlRegion xxx links to String
+  " styledNestedRegion xxx cleared
+  " styledDefinitionArgument xxx cleared
+  " javascriptTagRefStyledPrefix xxx cleared
+  " jsxRegion      xxx cleared
+  " javascriptCommentTodo xxx cleared
+  " javaScriptBlock xxx cleared
+  " jsxElement     xxx cleared
+  " jsxOpenPunct   xxx links to jsxPunct
+  " jsxOpenTag     xxx cleared
+  " jsxAttrib      xxx links to Type
+  " jsxExpressionBlock xxx cleared
+  " jsxSpreadOperator xxx links to Operator
+  " javaScriptLineComment xxx cleared
+  " javaScriptComment xxx cleared
+  " typescriptLineComment xxx links to Comment
+  " typescriptComment xxx links to Comment
+  " jsxCloseString xxx links to Comment
+  " jsxTag         xxx links to Function
+  " jsxComment     xxx links to Comment
+  " jsxCloseTag    xxx links to jsxCloseString
+  " jsxTagName     xxx links to Identifier
+  " jsxBraces      xxx links to Special
+  " javascriptSpreadOp xxx cleared
+  " typescriptObjectSpread xxx cleared
+  " jsxDot         xxx links to Operator
+  " jsxNamespace   xxx links to Operator
+  " jsxString      xxx links to String
+  " jsxEqual       xxx links to Operator
+  " jsxClosePunct  xxx links to jsxPunct
+  " jsxAttribKeyword xxx links to jsxAttrib
+  " jsxComponentName xxx links to Function
+  " jsTemplateStringTag xxx cleared
+  " jsxTaggedRegion xxx cleared
+  " jsxBackticks   xxx cleared
+  " jsxPunct       xxx links to jsxCloseString
+  " shebang        xxx links to Comment
+  " typescriptCommentTodo xxx links to Todo
+  " typescriptRef  xxx cleared
+  " typescriptRefD xxx links to String
+  " typescriptRefS xxx links to String
+  " typescriptRefComment xxx links to Include
+  " typescriptCommentSkip xxx cleared
+  " typescriptDocTags xxx links to Special
+  " typescriptCvsTag xxx links to Function
+  " typescriptDocComment xxx links to Comment
+  " typescriptDocParam xxx links to Function
+  " typescriptDocSeeTag xxx links to Function
+  " typescriptStringD xxx links to String
+  " typescriptStringS xxx links to String
+  " typescriptStringB xxx links to String
+  " typescriptSpecial xxx links to Special
+  " typescriptInterpolationDelimiter xxx links to Delimiter
+  " typescriptNumber xxx links to Number
+  " typescriptRegexpString xxx links to String
+  " typescriptFloat xxx links to Number
+  " typescriptDecorators xxx links to Special
+  " typescriptPrototype xxx links to
+  " Type
+  " typescriptSource xxx links to Special
+  " typescriptIdentifier xxx links to Identifier
+  " typescriptStorageClass xxx links to StorageClass
+  " typescriptOperator xxx links to Operator
+  " typescriptBoolean xxx links to Boolean
+  " typescriptNull xxx links to Type
+  " typescriptMessage xxx links to Keyword
+  " typescriptGlobal xxx links to Constant
+  " typescriptDeprecated xxx links to Exception
+  " typescriptConditional xxx links to Conditional
+  " typescriptRepeat xxx links to Repeat
+  " typescriptBranch xxx links to Conditional
+  " typescriptLabel xxx links to Label
+  " typescriptStatement xxx links to Statement
+  " typescriptGlobalObjects xxx links to Special
+  " typescriptGlobalNodeObjects xxx links to Special
+  " typescriptExceptions xxx links to Special
+  " typescriptReserved xxx links to Keyword
+  " typescriptVars xxx cleared
+  " typescriptFunction xxx cleared
+  " typescriptParameters xxx links to Operator
+  " typescriptType xxx links to Type
+  " typescriptDomErrNo xxx links to Constant
+  " typescriptDomNodeConsts xxx links to Constant
+  " typescriptHtmlEvents xxx links to Special
+  " typescriptParen xxx cleared
+  " typescriptDomElemAttrs xxx links to Label
+  " typescriptDomElemFuncs xxx links to PreProc
+  " typescriptDOMMethods xxx links to Function
+  " typescriptDOMProperties xxx links to Special
+  " typescriptHtmlElemAttrs xxx links to Label
+  " typescriptHtmlElemFuncs xxx links to PreProc
+  " typescriptHtmlElemProperties xxx links to Special
+  " typescriptAjaxProperties xxx links to Special
+  " typescriptAjaxMethods xxx links to Function
+  " typescriptPropietaryMethods xxx cleared
+  " typescriptEventListenerMethods xxx cleared
+  " typescriptDotNotation xxx cleared
+  " typescriptCssStyles xxx links to Label
+  " typescriptFuncKeyword xxx links to Keyword
+  " typescriptBrowserObjects xxx links to Constant
+  " typescriptDOMObjects xxx links to Constant
+  " typescriptAjaxObjects xxx links to Constant
+  " typescriptPropietaryObjects xxx links to Constant
+  " typescriptEventListenerKeywords xxx links to Keyword
+  " typescriptFuncArg xxx links to Special
+  " typescriptBraces xxx links to Function
+  " typescriptParens xxx links to Operator
+  " typescriptEndColons xxx links to Exception
+  " typescriptLogicSymbols xxx links to Boolean
+  " typescriptOpSymbols xxx links to Operator
+  " foldBraces     xxx cleared
+  " typescriptSuperBlock xxx links to Operator
+  " typescriptCharacter xxx links to Character
+  " typescriptError xxx links to Error
+  " typescriptParensError xxx links to Error
+  " typescriptParensErrA xxx links to Error
+  " typescriptParensErrB xxx links to Error
+  " typescriptParensErrC xxx links to
+  " Error
+  " typescriptFuncDef xxx links to Title
+  " typescriptFuncComma xxx links to Operator
+  " typescriptBracket xxx cleared
+  " typescriptBlock xxx cleared
+  " typescriptParenError xxx cleared
+  " styledTypescriptPrefix xxx cleared
+  " typescriptIdentifierName xxx cleared
+  " typescriptTypeBrackets xxx links to typescriptOpSymbols
+  " typescriptTypeCast xxx cleared
+  " vimTodo        xxx links to Todo
+  " vimCommand     xxx links to Statement
+  " vimStdPlugin   xxx cleared
+  " vimOption      xxx links to PreProc
+  " vimErrSetting  xxx links to vimError
+  " vimAutoEvent   xxx links to Type
+  " vimGroup       xxx links to Type
+  " vimHLGroup     xxx links to vimGroup
+  " vimFuncName    xxx links to Function
+  " vimGlobal      xxx cleared
+  " vimSubst       xxx links to vimCommand
+  " vimComment     xxx links to Comment
+  " vim9Comment    xxx links to Comment
+  " vimNumber      xxx links to Number
+  " vimAddress     xxx links to vimMark
+  " vimAutoCmd     xxx links to vimCommand
+  " vimEcho        xxx cleared
+  " vimIsCommand   xxx cleared
+  " vimExtCmd      xxx cleared
+  " vimFilter      xxx cleared
+  " vimLet         xxx links to vimCommand
+  " vimMap         xxx links to vimCommand
+  " vimMark        xxx links to Number
+  " vimSet         xxx cleared
+  " vimSyntax      xxx links to vimCommand
+  " vimUserCmd     xxx cleared
+  " vimCmdSep      xxx cleared
+  " vimVar         xxx links to Identifier
+  " vimFBVar       xxx links to vimVar
+  " vimInsert      xxx links to vimString
+  " vimBehaveModel xxx links to vimBehave
+  " vimBehaveError xxx links to vimError
+  " vimBehave      xxx links to vimCommand
+  " vimFTCmd       xxx links to vimCommand
+  " vimFTOption    xxx links to vimSynType
+  " vimFTError     xxx links to vimError
+  " vimFiletype    xxx cleared
+  " vimAugroup     xxx cleared
+  " vimExecute     xxx cleared
+  " vimNotFunc     xxx links to vimCommand
+  " vimFunction    xxx cleared
+  " vimFunctionError xxx links to vimError
+  " vimLineComment xxx links to vimComment
+  " vimSpecFile    xxx links to Identifier
+  " vimOper        xxx links to Operator
+  " vimOperParen   xxx cleared
+  " vimString      xxx links to String
+  " vimRegister    xxx links to SpecialChar
+  " vimCmplxRepeat xxx links to SpecialChar
+  " vimRegion      xxx cleared
+  " vimSynLine     xxx cleared
+  " vimNotation    xxx links to Special
+  " vimCtrlChar    xxx links to SpecialChar
+  " vimFuncVar     xxx links to Identifier
+  " vimContinue    xxx links to Special
+  " vimSetEqual    xxx cleared
+  " vimAugroupKey  xxx links to vimCommand
+  " vimAugroupError xxx links to vimError
+  " vimEnvvar      xxx links to PreProc
+  " vimFunc        xxx links to vimError
+  " vimType        xxx links to Type
+  " vimParenSep    xxx links to Delimiter
+  " vimoperStar    xxx links to vimOper
+  " vimSep         xxx links to Delimiter
+  " vimOperError   xxx links to Error
+  " vimFuncKey     xxx links to vimCommand
+  " vimFuncSID     xxx links to Special
+  " vimAbb         xxx links to vimCommand
+  " vimEchoHL      xxx links to vimCommand
+  " vimHighlight   xxx links to vimCommand
+  " vimLetHereDoc  xxx links to vimString
+  " vimNorm        xxx links to vimCommand
+  " vimSearch      xxx links to vimString
+  " vimUnmap       xxx links to vimMap
+  " vimUserCommand xxx links to vimCommand
+  " vimFuncBody    xxx cleared
+  " vimFuncBlank   xxx cleared
+  " vimPattern     xxx links to Type
+  " vimKeymapLhs   xxx cleared
+  " vimKeymapLineComment xxx links to vimComment
+  " vimKeymapStart xxx cleared
+  " vimKeymapRhs   xxx cleared
+  " vimKeymapTailComment xxx links to vimComment
+  " vimCommentString xxx links to vimString
+  " vimCommentTitle xxx links to PreProc
+  " vimKeymap      xxx cleared
+  " vimSpecFileMod xxx links to vimSpecFile
+  " vimEscapeBrace xxx cleared
+  " vimSetString   xxx links to vimString
+  " vimSubstRep    xxx cleared
+  " vimSubstRange  xxx cleared
+  " vimUserAttrb   xxx links to vimSpecial
+  " vimUserAttrbError xxx links to Error
+  " vimComFilter   xxx cleared
+  " vimUserAttrbKey xxx links to vimOption
+  " vimUserAttrbCmplt xxx links to vimSpecial
+  " vimUserCmdError xxx links to Error
+  " vimUserAttrbCmpltFunc xxx links to Special
+  " vimPatSepErr   xxx links to vimError
+  " vimPatSep      xxx links to SpecialChar
+  " vimPatSepZ     xxx links to vimPatSep
+  " vimPatSepZone  xxx links to vimString
+  " vimPatSepR     xxx links to vimPatSep
+  " vimPatRegion   xxx cleared
+  " vimNotPatSep   xxx links to vimString
+  " vimEscape      xxx links to Special
+  " vimStringEnd   xxx links to vimString

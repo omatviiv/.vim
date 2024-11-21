@@ -30,11 +30,14 @@
   au BufNewFile,BufRead *.jsx set filetype=javascript
   " ignore some directories for vimgrep
   set wildignore+=node_modules
-  " <copy to clipboard>
+  " <copy to macos clipboard>
   nnoremap Y "+y
   vnoremap Y "+y
   nnoremap yY ^"+y$
-  " </copy to clipboard>
+  " </copy to macos clipboard>
+  " <pase from macos clipboard>
+  nnoremap P "*p
+  " </pase from macos clipboard>
 " </GENERAL>
 
 " <PLUGINS>

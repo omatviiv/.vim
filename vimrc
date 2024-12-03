@@ -36,7 +36,7 @@
   nnoremap yY ^"+y$
   " </copy to macos clipboard>
   " <pase from macos clipboard>
-  nnoremap P "*p
+  nnoremap " "*p
   " </pase from macos clipboard>
 " </GENERAL>
 

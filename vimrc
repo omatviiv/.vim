@@ -102,10 +102,13 @@
   " defined here:
   let g:shipacmsLocalDB = 'postgres://postgres@localhost/shipacms'
   let g:dockerLocalDB = 'postgres://postgres@localhost:5433'
+  let g:sqliteMechantShipaApp = 'sqlite:/Users/omatviiv/shipa/MerchantShopifyApp/prisma/dev.sqlite'
   " UNCOMENT NEXT LINE IF YOU WANT TO TRIGGER sql query run against default db on sql file open
   " au BufEnter *.sql :DB g:postgresql = postgresql://postgres@localhost/shipacms
   " => simpledb
   " git clone https://github.com/ivalkeen/vim-simpledb ~/.vim/bundle/simpledb
+  " => vim-prisma
+  " git clone git@github.com:prisma/vim-prisma.git ~/.vim/bundle/vim-prisma
   """"""" MISCELANEOUS
   " vim-http
   " git clone https://github.com/nicwest/vim-http.git ~/.vim/bundle/vim-http

@@ -101,8 +101,7 @@
   " save urls in vim variables for oftenly used dbs, variables should be
   " defined here:
   let g:shipacmsLocalDB = 'postgres://postgres@localhost/shipacms'
-  let g:dockerLocalDB = 'postgres://postgres@localhost:5433'
-  let g:sqliteMechantShipaApp = 'sqlite:/Users/omatviiv/shipa/MerchantShopifyApp/prisma/dev.sqlite'
+  let g:merchantShopifyAppDB = 'sqlite:/Users/omatviiv/shipa/MerchantShopifyApp/prisma/dev.sqlite'
   " UNCOMENT NEXT LINE IF YOU WANT TO TRIGGER sql query run against default db on sql file open
   " au BufEnter *.sql :DB g:postgresql = postgresql://postgres@localhost/shipacms
   " => simpledb
@@ -132,15 +131,23 @@
   nnoremap <c-j> :res +2<Enter>
   nnoremap <c-h> :vertical res -4<Enter>
   nnoremap <c-l> :vertical res +4<Enter>
-  " quickly switch to a window
+  " <quickly switch to a window>
+  " quickly switch up
   nnoremap k <c-w>k
   nnoremap ˚ <c-w>k
+  nnoremap Ż <c-w>k
+  " quickly switch down
   nnoremap j <c-w>j
   nnoremap ∆ <c-w>j
+  " quickly switch left
   nnoremap h <c-w>h
   nnoremap ˙ <c-w>h
+  nnoremap ķ <c-w>h
+  " quickly switch right
   nnoremap l <c-w>l
   nnoremap ¬ <c-w>l
+  nnoremap ł <c-w>l
+  " </quickly switch to a window>
   " quickly type a shell command
   nnoremap ! :!
   nnoremap <F3> :!./node_modules/.bin/

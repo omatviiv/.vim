@@ -164,14 +164,20 @@
 " <INDENT>
   set tabstop=2
   set shiftwidth=2
-  nnoremap m :m .+1<CR>
-  nnoremap µ :m .+1<CR>
+  " <move lines up>
   nnoremap , :m .-2<CR>
   nnoremap ≤ :m .-2<CR>
-  vnoremap m :m '>+1<CR>gv
-  vnoremap µ :m '>+1<CR>gv
   vnoremap , :m '<-2<CR>gv
   vnoremap ≤ :m '<-2<CR>gv
+  " </move lines up>
+  " <move lines down>
+  nnoremap m :m .+1<CR>
+  nnoremap Ķ :m .+1<CR>
+  nnoremap µ :m .+1<CR>
+  vnoremap m :m '>+1<CR>gv
+  vnoremap Ķ :m '>+1<CR>gv
+  vnoremap µ :m '>+1<CR>gv
+  " </move lines down>
 " </INDENT>
 
 " <COMMANDS>
